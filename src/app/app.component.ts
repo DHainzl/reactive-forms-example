@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
                 movies: new FormControl(hero.appearances.movies),
                 games: new FormControl(hero.appearances.games),
             }),
-            powers: new FormArray(powerControls,  this.getPowersValidator()),
+            powers: new FormArray(powerControls, this.getPowersValidator()),
         });
     }
 
