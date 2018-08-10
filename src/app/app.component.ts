@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { HeroService } from './test-service/hero.service';
-import { Hero, HeroPower } from './test-service/hero.interface';
+import { HeroService } from './hero-service/hero.service';
+import { Hero, HeroPower } from './hero-service/hero.interface';
 import { Utils } from './utils';
 
 @Component({
@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
                 movies: new FormControl(hero.appearances.movies),
                 games: new FormControl(hero.appearances.games),
             }),
-            powers: new FormArray(powerControls, this.getPowersValidator()),
+            powers: new FormArray(powerControls,  this.getPowersValidator()),
         });
     }
 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeroService } from './test-service/hero.service';
+import { HeroService } from './hero-service/hero.service';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { HeroPowersComponent } from './hero-powers/hero-powers.component';
