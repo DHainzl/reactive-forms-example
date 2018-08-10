@@ -1,0 +1,14 @@
+<div [formGroup]="form">
+    <div formArrayName="powers">
+        <h3>Hero Powers</h3>
+        <div class="text-muted">(min: 1, max: 5)</div>
+        <div *ngFor="let power of form.controls.powers.controls; let i = index">
+            <app-hero-power
+                [id]="i"
+                [power]="power"
+                (remove)="removePower(i)"
+            ></app-hero-power>
+        </div>
+        <button (click)="addPowerClicked()" class="btn btn-block btn-success">+ Add Power</button>
+    </div>
+</div>
