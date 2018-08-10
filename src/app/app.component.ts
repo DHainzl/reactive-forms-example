@@ -68,6 +68,10 @@ export class AppComponent implements OnInit {
             this.results = 'Saving data:<br /><br />' + JSON.stringify(this.form.value, null, 4);
         } else {
             Utils.validateFormControls(this.form.controls);
+
+            // this.form.markAsTouched();
+            // this.form.markAsDirty();
+
             this.results = 'Form is invalid';
         }
     }
